@@ -20,6 +20,17 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9x9-U6-6bR">
+                    <rect key="frame" x="25" y="278" width="325" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.97680455446243286" green="0.3076456975438247" blue="0.37254623706978401" alpha="0.878356073943662" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Let's GO!!!">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="authenticate:" destination="-1" eventType="touchUpInside" id="IZw-dM-vfj"/>
+                    </connections>
+                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ny-k2-Egy">
                     <rect key="frame" x="25" y="92" width="64" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -53,15 +64,12 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9x9-U6-6bR">
-                    <rect key="frame" x="25" y="278" width="325" height="45"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wht-vN-Ch1">
+                    <rect key="frame" x="93" y="358" width="188" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.97680455446243286" green="0.3076456975438247" blue="0.37254623706978401" alpha="0.878356073943662" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Let's GO!!!">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
+                    <state key="normal" title="Random Pic"/>
                     <connections>
-                        <action selector="authenticate:" destination="-1" eventType="touchUpInside" id="IZw-dM-vfj"/>
+                        <action selector="showRandomPic:" destination="-1" eventType="touchUpInside" id="PBh-th-vVP"/>
                     </connections>
                 </button>
             </subviews>

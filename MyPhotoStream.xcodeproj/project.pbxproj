@@ -33,6 +33,9 @@
 		8B8C3EC01EBE104100A12518 /* MPSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C3EBC1EBE104100A12518 /* MPSTableViewCell.xib */; };
 		8B8C3EC11EBE104100A12518 /* MPSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C3EBC1EBE104100A12518 /* MPSTableViewCell.xib */; };
 		8B8C3EC21EBE104100A12518 /* MPSTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C3EBC1EBE104100A12518 /* MPSTableViewCell.xib */; };
+		8B8C3EC41EBEDB8700A12518 /* MPSRandomPicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3EC31EBEDB8700A12518 /* MPSRandomPicVC.swift */; };
+		8B8C3EC51EBEDB8700A12518 /* MPSRandomPicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3EC31EBEDB8700A12518 /* MPSRandomPicVC.swift */; };
+		8B8C3EC61EBEDB8700A12518 /* MPSRandomPicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3EC31EBEDB8700A12518 /* MPSRandomPicVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +76,7 @@
 		8B8C3EB41EBDFB9E00A12518 /* MPSAuthenticationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSAuthenticationVC.xib; sourceTree = "<group>"; };
 		8B8C3EBB1EBE104100A12518 /* MPSTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSTableViewCell.swift; sourceTree = "<group>"; };
 		8B8C3EBC1EBE104100A12518 /* MPSTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSTableViewCell.xib; sourceTree = "<group>"; };
+		8B8C3EC31EBEDB8700A12518 /* MPSRandomPicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSRandomPicVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 				8B8C3EA91EBDA7D500A12518 /* Network */,
 				8B8C3E781EBDA75100A12518 /* AppDelegate.swift */,
 				8B8C3E7A1EBDA75100A12518 /* ViewController.swift */,
+				8B8C3EC31EBEDB8700A12518 /* MPSRandomPicVC.swift */,
 				8B8C3EBB1EBE104100A12518 /* MPSTableViewCell.swift */,
 				8B8C3EBC1EBE104100A12518 /* MPSTableViewCell.xib */,
 				8B8C3E7C1EBDA75100A12518 /* Main.storyboard */,
@@ -322,6 +327,7 @@
 				8B8C3EB51EBDFB9E00A12518 /* MPSAuthenticationVC.swift in Sources */,
 				8B8C3E791EBDA75100A12518 /* AppDelegate.swift in Sources */,
 				8B8C3EAB1EBDAAE600A12518 /* MPSConnectorManager.swift in Sources */,
+				8B8C3EC41EBEDB8700A12518 /* MPSRandomPicVC.swift in Sources */,
 				8B8C3EAF1EBDAAF400A12518 /* MPSConnector.swift in Sources */,
 				8B8C3E811EBDA75100A12518 /* MyPhotoStream.xcdatamodeld in Sources */,
 			);
@@ -332,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B8C3EAC1EBDAAE600A12518 /* MPSConnectorManager.swift in Sources */,
+				8B8C3EC51EBEDB8700A12518 /* MPSRandomPicVC.swift in Sources */,
 				8B8C3EB61EBDFB9E00A12518 /* MPSAuthenticationVC.swift in Sources */,
 				8B8C3EBE1EBE104100A12518 /* MPSTableViewCell.swift in Sources */,
 				8B8C3E911EBDA75100A12518 /* MyPhotoStreamTests.swift in Sources */,
@@ -344,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B8C3EAD1EBDAAE600A12518 /* MPSConnectorManager.swift in Sources */,
+				8B8C3EC61EBEDB8700A12518 /* MPSRandomPicVC.swift in Sources */,
 				8B8C3EB71EBDFB9E00A12518 /* MPSAuthenticationVC.swift in Sources */,
 				8B8C3EBF1EBE104100A12518 /* MPSTableViewCell.swift in Sources */,
 				8B8C3E9C1EBDA75100A12518 /* MyPhotoStreamUITests.swift in Sources */,

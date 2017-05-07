@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -55,6 +56,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-68" y="-287"/>
+        </scene>
+        <!--Random PicVC-->
+        <scene sceneID="KbB-kR-3Dc">
+            <objects>
+                <viewController storyboardIdentifier="MPSRandomPicVC" id="6ta-RT-nD1" customClass="MPSRandomPicVC" customModule="MyPhotoStream" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W6W-kN-JfW"/>
+                        <viewControllerLayoutGuide type="bottom" id="mX2-zQ-0Pf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jux-yY-owM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C61-eh-K1Z">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="C61-eh-K1Z" secondAttribute="height" id="F9x-eA-2Xx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAT-Tb-b2T">
+                                <rect key="frame" x="105" y="585" width="165" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closePressed:" destination="6ta-RT-nD1" eventType="touchUpInside" id="FHM-Wm-Z1B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="C61-eh-K1Z" secondAttribute="trailing" id="8iB-8x-J6q"/>
+                            <constraint firstItem="C61-eh-K1Z" firstAttribute="leading" secondItem="Jux-yY-owM" secondAttribute="leading" id="M3O-N8-JEJ"/>
+                            <constraint firstItem="C61-eh-K1Z" firstAttribute="centerY" secondItem="Jux-yY-owM" secondAttribute="centerY" id="Uac-gA-bTB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="C61-eh-K1Z" id="kZN-mq-7CG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4zt-iR-c5I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946.39999999999998" y="-287.40629685157421"/>
         </scene>
     </scenes>
 </document>

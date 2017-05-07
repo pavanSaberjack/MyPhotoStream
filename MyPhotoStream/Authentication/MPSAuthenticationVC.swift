@@ -38,6 +38,15 @@ class MPSAuthenticationVC: UIViewController {
             print("Enter correct details")
         }
     }
+    
+    
+    @IBAction func showRandomPic(_ sender: Any) {
+        
+        
+        
+        let randomPicVC: MPSRandomPicVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MPSRandomPicVC") as! MPSRandomPicVC
+        self.present(randomPicVC, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

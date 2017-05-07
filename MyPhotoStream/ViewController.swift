@@ -15,9 +15,12 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
         super.viewDidLoad()
         imagesTableView.register(UINib(nibName: "MPSTableViewCell", bundle: nil), forCellReuseIdentifier: "DefaultCell")
         
-//        imagesTableView.register(UITableViewCell.self, forCellReuseIdentifier: )        
+//        imagesTableView.register(UITableViewCell.self, forCellReuseIdentifier: )
+        
+//        self.randomPic()
     }
-
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if MPSConnectorManager.sharedInstance.isAuthenticated() == false {
@@ -43,6 +46,8 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
         MPSConnectorManager.sharedInstance.status = true        
         self.dismiss(animated: true) {
             // do anyting
+            
+//            self.randomPic()
         }
     }
     
