@@ -60,7 +60,7 @@ class MPSConnectorManager: NSObject {
     }
     
     func showRandomPic(_ urlString: String, completionHandler: @escaping (UIImage?, Error?) -> Swift.Void) {
-        guard let url = URL(string: urlString) else { return }
+        guard let url = URL(string: "https://unsplash.it/200/300/?random") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
                 if error != nil {

@@ -8,11 +8,15 @@
 
 import UIKit
 
+//import "MPSContstants.Swift"
+
 class MPSRandomPicVC: UIViewController {
     
     @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         
         MPSConnectorManager.sharedInstance.getRandomPic { (image, error) in
             if error != nil {

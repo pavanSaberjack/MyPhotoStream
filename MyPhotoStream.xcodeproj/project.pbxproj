@@ -25,6 +25,9 @@
 		8B72D9711EBEFF2B00ECCD22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9671EBEFF2B00ECCD22 /* ViewController.swift */; };
 		8B72D9721EBEFF2B00ECCD22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9671EBEFF2B00ECCD22 /* ViewController.swift */; };
 		8B72D9731EBEFF2B00ECCD22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9671EBEFF2B00ECCD22 /* ViewController.swift */; };
+		8B72D97A1EC02D4600ECCD22 /* MPSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9791EC02D4600ECCD22 /* MPSConstants.swift */; };
+		8B72D97B1EC02D4600ECCD22 /* MPSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9791EC02D4600ECCD22 /* MPSConstants.swift */; };
+		8B72D97C1EC02D4600ECCD22 /* MPSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9791EC02D4600ECCD22 /* MPSConstants.swift */; };
 		8B8C3E791EBDA75100A12518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3E781EBDA75100A12518 /* AppDelegate.swift */; };
 		8B8C3E7E1EBDA75100A12518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C3E7C1EBDA75100A12518 /* Main.storyboard */; };
 		8B8C3E811EBDA75100A12518 /* MyPhotoStream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3E7F1EBDA75100A12518 /* MyPhotoStream.xcdatamodeld */; };
@@ -64,13 +67,14 @@
 		8B72D9651EBEFF2B00ECCD22 /* MPSAuthenticationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MPSAuthenticationVC.xib; sourceTree = "<group>"; };
 		8B72D9661EBEFF2B00ECCD22 /* MPSRandomPicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSRandomPicVC.swift; sourceTree = "<group>"; };
 		8B72D9671EBEFF2B00ECCD22 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B72D9791EC02D4600ECCD22 /* MPSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSConstants.swift; sourceTree = "<group>"; };
 		8B8C3E751EBDA75100A12518 /* MyPhotoStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPhotoStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8C3E781EBDA75100A12518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8C3E7D1EBDA75100A12518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B8C3E801EBDA75100A12518 /* MyPhotoStream.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyPhotoStream.xcdatamodel; sourceTree = "<group>"; };
-		8B8C3E821EBDA75100A12518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B8C3E821EBDA75100A12518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		8B8C3E851EBDA75100A12518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8B8C3E871EBDA75100A12518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B8C3E871EBDA75100A12518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		8B8C3E8C1EBDA75100A12518 /* MyPhotoStreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPhotoStreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8C3E901EBDA75100A12518 /* MyPhotoStreamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoStreamTests.swift; sourceTree = "<group>"; };
 		8B8C3E921EBDA75100A12518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		8B72D9571EBEFEBF00ECCD22 /* ModalLayer */ = {
 			isa = PBXGroup;
 			children = (
+				8B8C3E7F1EBDA75100A12518 /* MyPhotoStream.xcdatamodeld */,
 			);
 			path = ModalLayer;
 			sourceTree = "<group>";
@@ -157,6 +162,32 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		8B72D9741EC0299500ECCD22 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8B72D9751EC0299500ECCD22 /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8B72D9751EC0299500ECCD22 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8B72D9791EC02D4600ECCD22 /* MPSConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8B72D9771EC029D300ECCD22 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8B8C3E841EBDA75100A12518 /* LaunchScreen.storyboard */,
+				8B8C3E821EBDA75100A12518 /* Assets.xcassets */,
+				8B8C3E871EBDA75100A12518 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		8B8C3E6C1EBDA75100A12518 = {
 			isa = PBXGroup;
 			children = (
@@ -180,16 +211,14 @@
 		8B8C3E771EBDA75100A12518 /* MyPhotoStream */ = {
 			isa = PBXGroup;
 			children = (
+				8B72D9771EC029D300ECCD22 /* SupportingFiles */,
+				8B72D9741EC0299500ECCD22 /* Common */,
 				8B72D9561EBEFEBF00ECCD22 /* ControllerLayer */,
 				8B72D9571EBEFEBF00ECCD22 /* ModalLayer */,
 				8B72D9581EBEFEBF00ECCD22 /* ViewLayer */,
 				8B8C3EA91EBDA7D500A12518 /* Network */,
 				8B8C3E781EBDA75100A12518 /* AppDelegate.swift */,
 				8B8C3E7C1EBDA75100A12518 /* Main.storyboard */,
-				8B8C3E821EBDA75100A12518 /* Assets.xcassets */,
-				8B8C3E841EBDA75100A12518 /* LaunchScreen.storyboard */,
-				8B8C3E871EBDA75100A12518 /* Info.plist */,
-				8B8C3E7F1EBDA75100A12518 /* MyPhotoStream.xcdatamodeld */,
 			);
 			path = MyPhotoStream;
 			sourceTree = "<group>";
@@ -371,6 +400,7 @@
 				8B72D96E1EBEFF2B00ECCD22 /* MPSRandomPicVC.swift in Sources */,
 				8B8C3EAF1EBDAAF400A12518 /* MPSConnector.swift in Sources */,
 				8B72D9711EBEFF2B00ECCD22 /* ViewController.swift in Sources */,
+				8B72D97A1EC02D4600ECCD22 /* MPSConstants.swift in Sources */,
 				8B8C3E811EBDA75100A12518 /* MyPhotoStream.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,6 +411,7 @@
 			files = (
 				8B72D95E1EBEFF0500ECCD22 /* MPSTableViewCell.swift in Sources */,
 				8B72D96F1EBEFF2B00ECCD22 /* MPSRandomPicVC.swift in Sources */,
+				8B72D97B1EC02D4600ECCD22 /* MPSConstants.swift in Sources */,
 				8B8C3EAC1EBDAAE600A12518 /* MPSConnectorManager.swift in Sources */,
 				8B72D9691EBEFF2B00ECCD22 /* MPSAuthenticationVC.swift in Sources */,
 				8B72D9721EBEFF2B00ECCD22 /* ViewController.swift in Sources */,
@@ -395,6 +426,7 @@
 			files = (
 				8B72D95F1EBEFF0500ECCD22 /* MPSTableViewCell.swift in Sources */,
 				8B72D9701EBEFF2B00ECCD22 /* MPSRandomPicVC.swift in Sources */,
+				8B72D97C1EC02D4600ECCD22 /* MPSConstants.swift in Sources */,
 				8B8C3EAD1EBDAAE600A12518 /* MPSConnectorManager.swift in Sources */,
 				8B72D96A1EBEFF2B00ECCD22 /* MPSAuthenticationVC.swift in Sources */,
 				8B72D9731EBEFF2B00ECCD22 /* ViewController.swift in Sources */,
@@ -433,6 +465,7 @@
 				8B8C3E851EBDA75100A12518 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -536,6 +569,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PYR923S5V2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MyPhotoStream/SupportingFiles/MPSPrefixHeader.pch;
 				INFOPLIST_FILE = MyPhotoStream/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -550,6 +585,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PYR923S5V2;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MyPhotoStream/SupportingFiles/MPSPrefixHeader.pch;
 				INFOPLIST_FILE = MyPhotoStream/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -665,7 +702,8 @@
 				8B8C3E801EBDA75100A12518 /* MyPhotoStream.xcdatamodel */,
 			);
 			currentVersion = 8B8C3E801EBDA75100A12518 /* MyPhotoStream.xcdatamodel */;
-			path = MyPhotoStream.xcdatamodeld;
+			name = MyPhotoStream.xcdatamodeld;
+			path = ../MyPhotoStream.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
