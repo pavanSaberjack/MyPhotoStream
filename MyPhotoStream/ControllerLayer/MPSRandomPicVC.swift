@@ -14,9 +14,7 @@ class MPSRandomPicVC: UIViewController {
     
     @IBOutlet weak var imgView: UIImageView!
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
+        super.viewDidLoad()        
         
         MPSConnectorManager.sharedInstance.getRandomPic { (image, error) in
             if error != nil {

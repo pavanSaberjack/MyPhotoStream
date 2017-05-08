@@ -50,6 +50,10 @@
                     <constraint firstItem="X32-qU-vZV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="pwK-mo-ars"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="imgView" destination="9Pd-C3-3kY" id="ZWd-Q8-ifU"/>
+                <outlet property="nameLabel" destination="X32-qU-vZV" id="UNw-od-8Zs"/>
+            </connections>
             <point key="canvasLocation" x="-175" y="-39"/>
         </tableViewCell>
     </objects>

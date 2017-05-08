@@ -11,12 +11,27 @@ import UIKit
 class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var imagesTableView: UITableView!
     
+    var imagesDict: [String: UIImage] = [:]
+    var imageURLsArray: Array<String> = Array()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagesTableView.register(UINib(nibName: "MPSTableViewCell", bundle: nil), forCellReuseIdentifier: "DefaultCell")
-        
 //        imagesTableView.register(UITableViewCell.self, forCellReuseIdentifier: )
-//        self.randomPic()
+        
+        MPSConnectorManager.sharedInstance.getPhotosList { (images, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                let arr : [String] = images!
+                self.imageURLsArray.append(contentsOf: arr)
+                self.imagesTableView.reloadData()
+            }
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,20 +59,43 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
         MPSConnectorManager.sharedInstance.status = true        
         self.dismiss(animated: true) {
             // do anyting
-//            self.randomPic()
         }
     }
     
     // MARK: UITableViewDataSource methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.imageURLsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "DefaultCell"
         let cell: MPSTableViewCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! MPSTableViewCell
         cell.nameLabel?.text = "Image"
+        
+        if imagesDict[String(indexPath.row)] == nil {
+            cell.imgView?.image = nil
+            // download Image
+            downloadImage(imageURLsArray[indexPath.row], String(indexPath.row))
+        } else {
+            let image: UIImage = self.imagesDict[String(indexPath.row)]!
+            cell.imgView?.image = image
+        }
+        
         return cell
+    }
+    
+    func downloadImage(_ url: String, _ key: String) {
+        MPSConnectorManager.sharedInstance.downloadPic(url) { (image, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.imagesDict[key] = image
+                self.imagesTableView.reloadData()
+            }
+        }
     }
     
     // MARK: UITableViewDelegate methods
