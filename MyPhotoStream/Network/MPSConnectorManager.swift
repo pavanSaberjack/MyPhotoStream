@@ -14,7 +14,7 @@ class MPSConnectorManager: NSObject {
     let randomPicURLString: String = "https://unsplash.it/200/300/?random"
     
     static let sharedInstance: MPSConnectorManager = MPSConnectorManager()
-    public var status: Bool = false;
+    public var status: Bool = true;
     
     let applicationID : String = "947050e733a9cacb8c1c236bf3f673fac96c7248256073b223f36787a2bf3c98"
     let secret : String = "52360c281b44cb79f9b5f549f414472fd9c2a7c4fbec3df3758d5c6081e8a3e6"

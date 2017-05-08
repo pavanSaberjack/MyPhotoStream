@@ -17,6 +17,8 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imagesTableView.backgroundColor = DEFAULT_BACKGROUND_COLOR
         imagesTableView.register(UINib(nibName: "MPSTableViewCell", bundle: nil), forCellReuseIdentifier: "DefaultCell")
 //        imagesTableView.register(UITableViewCell.self, forCellReuseIdentifier: )
         
@@ -70,7 +72,9 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = "DefaultCell"
         let cell: MPSTableViewCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! MPSTableViewCell
+        cell.contentView.bringSubview(toFront: cell.nameLabel)
         cell.nameLabel?.text = "Image"
+        
         
         if imagesDict[String(indexPath.row)] == nil {
             cell.imgView?.image = nil
@@ -79,8 +83,7 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
         } else {
             let image: UIImage = self.imagesDict[String(indexPath.row)]!
             cell.imgView?.image = image
-        }
-        
+        }        
         return cell
     }
     
@@ -105,6 +108,14 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1.0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 1.0
     }
 }
 
