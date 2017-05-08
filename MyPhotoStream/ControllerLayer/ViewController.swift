@@ -16,10 +16,8 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
         imagesTableView.register(UINib(nibName: "MPSTableViewCell", bundle: nil), forCellReuseIdentifier: "DefaultCell")
         
 //        imagesTableView.register(UITableViewCell.self, forCellReuseIdentifier: )
-        
 //        self.randomPic()
     }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -46,7 +44,6 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
         MPSConnectorManager.sharedInstance.status = true        
         self.dismiss(animated: true) {
             // do anyting
-            
 //            self.randomPic()
         }
     }
@@ -65,9 +62,11 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
     
     // MARK: UITableViewDelegate methods
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90.0
+        return 430.0
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
