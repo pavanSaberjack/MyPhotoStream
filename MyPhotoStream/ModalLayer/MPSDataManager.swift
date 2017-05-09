@@ -118,21 +118,40 @@ class MPSDataManager: NSObject {
     }
     
     func getImagesList() -> [MPSImage] {
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "MPSImage")
-        let moc = self.managedObjectContext        
+        let fetchRequest: NSFetchRequest<MPSImage> = MPSImage.fetchRequest()
+        let moc = self.managedObjectContext
         do {
-            let fetchedEmployees = try moc.fetch(fetchRequest) as! [MPSImage]
+            let fetchedEmployees = try moc.fetch(fetchRequest)
             return fetchedEmployees
         } catch {
             fatalError("Failed to fetch employees: \(error)")
-        }
-        
-        
-        do {
-            return try self.managedObjectContext.fetch(fetchRequest) as! [MPSImage]
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-            return []
+        }        
+    }
+    
+    func downloadImage(_ imageObj: MPSImage , completion: @escaping (MPSImage?) -> Swift.Void) {
+        MPSConnectorManager.sharedInstance.downloadPic(imageObj.downloadURLStr!) { (image, error) in
+            if error != nil {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            let moc = self.managedObjectContext
+            let fetchRequest: NSFetchRequest<MPSImage> = MPSImage.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "imageId == %s", argumentArray: [imageObj.imageId!])
+            
+            print(imageObj.imageId ?? "not found")
+            print(fetchRequest.predicate?.predicateFormat ?? "not found")
+            
+            do {
+                let fetchedImgObjects = try moc.fetch(fetchRequest) 
+                let obj = fetchedImgObjects.first
+                
+                obj?.image = image
+                self.saveContext()
+                completion(obj)
+            } catch {
+                fatalError("Failed to fetch employees: \(error)")
+            }
         }
     }
     
@@ -148,6 +167,7 @@ class MPSDataManager: NSObject {
             
             let userObj = dictionary["user"] as? [String:AnyObject]
             imageObj.name = userObj?["name"] as? String
+            imageObj.imageId = dictionary["id"] as? String
             imageObj.smallDescription = userObj?["bio"] as? String
             
             let urls = dictionary["urls"] as? [String:AnyObject]

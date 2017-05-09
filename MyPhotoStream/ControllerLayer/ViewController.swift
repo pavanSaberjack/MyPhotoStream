@@ -82,9 +82,9 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
         
         cell.nameLabel?.text = imageObj.name
         cell.smallDescriptionLabel.text = imageObj.smallDescription
+        cell.imgView?.image = nil
         
-        if imageObj.image == nil {
-            cell.imgView?.image = nil
+        if imageObj.image == nil {            
             // download Image
             downloadImage(imageObj.downloadURLStr!, imageObj)
         } else {
@@ -95,14 +95,15 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
     }
     
     func downloadImage(_ url: String, _ imageObject: MPSImage) {
-        MPSConnectorManager.sharedInstance.downloadPic(url) { (image, error) in
-            if error != nil {
-                print(error!.localizedDescription)
+        MPSDataManager.sharedInstance.downloadImage(imageObject) { (updatedObj) in
+            if updatedObj == nil || updatedObj?.image == nil {
+                print()
                 return
             }
             
             DispatchQueue.main.async {
-                imageObject.image = image
+                let objIndex: Int = self.imagesArray.index(of: imageObject)!
+                self.imagesArray[objIndex] = updatedObj!
                 self.imagesTableView.reloadData()
             }
         }
