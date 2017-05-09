@@ -28,6 +28,9 @@
 		8B72D97A1EC02D4600ECCD22 /* MPSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9791EC02D4600ECCD22 /* MPSConstants.swift */; };
 		8B72D97B1EC02D4600ECCD22 /* MPSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9791EC02D4600ECCD22 /* MPSConstants.swift */; };
 		8B72D97C1EC02D4600ECCD22 /* MPSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9791EC02D4600ECCD22 /* MPSConstants.swift */; };
+		8B72D97E1EC0678800ECCD22 /* MPSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D97D1EC0678800ECCD22 /* MPSDataManager.swift */; };
+		8B72D97F1EC0678800ECCD22 /* MPSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D97D1EC0678800ECCD22 /* MPSDataManager.swift */; };
+		8B72D9801EC0678800ECCD22 /* MPSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D97D1EC0678800ECCD22 /* MPSDataManager.swift */; };
 		8B8C3E791EBDA75100A12518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3E781EBDA75100A12518 /* AppDelegate.swift */; };
 		8B8C3E7E1EBDA75100A12518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C3E7C1EBDA75100A12518 /* Main.storyboard */; };
 		8B8C3E811EBDA75100A12518 /* MyPhotoStream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3E7F1EBDA75100A12518 /* MyPhotoStream.xcdatamodeld */; };
@@ -68,6 +71,7 @@
 		8B72D9661EBEFF2B00ECCD22 /* MPSRandomPicVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSRandomPicVC.swift; sourceTree = "<group>"; };
 		8B72D9671EBEFF2B00ECCD22 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B72D9791EC02D4600ECCD22 /* MPSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSConstants.swift; sourceTree = "<group>"; };
+		8B72D97D1EC0678800ECCD22 /* MPSDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSDataManager.swift; sourceTree = "<group>"; };
 		8B8C3E751EBDA75100A12518 /* MyPhotoStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPhotoStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8C3E781EBDA75100A12518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8C3E7D1EBDA75100A12518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				8B8C3E7F1EBDA75100A12518 /* MyPhotoStream.xcdatamodeld */,
+				8B72D97D1EC0678800ECCD22 /* MPSDataManager.swift */,
 			);
 			path = ModalLayer;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B72D97E1EC0678800ECCD22 /* MPSDataManager.swift in Sources */,
 				8B8C3E791EBDA75100A12518 /* AppDelegate.swift in Sources */,
 				8B72D9681EBEFF2B00ECCD22 /* MPSAuthenticationVC.swift in Sources */,
 				8B8C3EAB1EBDAAE600A12518 /* MPSConnectorManager.swift in Sources */,
@@ -410,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B72D95E1EBEFF0500ECCD22 /* MPSTableViewCell.swift in Sources */,
+				8B72D97F1EC0678800ECCD22 /* MPSDataManager.swift in Sources */,
 				8B72D96F1EBEFF2B00ECCD22 /* MPSRandomPicVC.swift in Sources */,
 				8B72D97B1EC02D4600ECCD22 /* MPSConstants.swift in Sources */,
 				8B8C3EAC1EBDAAE600A12518 /* MPSConnectorManager.swift in Sources */,
@@ -425,6 +432,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B72D95F1EBEFF0500ECCD22 /* MPSTableViewCell.swift in Sources */,
+				8B72D9801EC0678800ECCD22 /* MPSDataManager.swift in Sources */,
 				8B72D9701EBEFF2B00ECCD22 /* MPSRandomPicVC.swift in Sources */,
 				8B72D97C1EC02D4600ECCD22 /* MPSConstants.swift in Sources */,
 				8B8C3EAD1EBDAAE600A12518 /* MPSConnectorManager.swift in Sources */,

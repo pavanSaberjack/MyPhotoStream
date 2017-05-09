@@ -85,7 +85,7 @@ class MPSConnectorManager: NSObject {
             }.resume()
     }
     
-    func getPhotosList(completionHandler: @escaping ([String]?, Error?) -> Swift.Void) {
+    func getPhotosList(completionHandler: @escaping ([MPSImage]?, Error?) -> Swift.Void) {
         let url = URL(string: "https://api.unsplash.com/photos")
         let request: NSMutableURLRequest = NSMutableURLRequest(url: url!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10)
         request.httpMethod = "GET"
@@ -112,16 +112,10 @@ class MPSConnectorManager: NSObject {
             }
             
             let responseJSON = (try? JSONSerialization.jsonObject(with: data!, options: [])) as? [AnyObject]
-            var imagesArray: Array<AnyObject> = Array()
-            for dictionary in responseJSON! {
-                print(dictionary)
-                let urls = dictionary["urls"] as? [String:AnyObject]
-                let url = urls?["regular"]
-                imagesArray.append(url!)
-            }
-            
+
+            let imagesArray: Array<MPSImage> = MPSDataManager.sharedInstance.saveImages(responseJSON!)
             DispatchQueue.main.async {
-                completionHandler(imagesArray as? [String], error)
+                completionHandler(imagesArray, error)
             }
         }.resume()
     }
