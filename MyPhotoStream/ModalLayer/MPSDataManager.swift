@@ -54,7 +54,6 @@ class MPSDataManager: NSObject {
         return container
     }()
     
-    
     // iOS 9 and below
     lazy var applicationDocumentsDirectory: URL = {
         
@@ -117,8 +116,8 @@ class MPSDataManager: NSObject {
         }
     }
     
-    func getImagesList() -> [MPSImage] {
-        let fetchRequest: NSFetchRequest<MPSImage> = MPSImage.fetchRequest()
+    func getImagesList() -> [MPSImageObj] {
+        let fetchRequest: NSFetchRequest<MPSImageObj> = MPSImageObj.fetchRequest()
         let moc = self.managedObjectContext
         do {
             let fetchedEmployees = try moc.fetch(fetchRequest)
@@ -128,7 +127,7 @@ class MPSDataManager: NSObject {
         }        
     }
     
-    func downloadImage(_ imageObj: MPSImage , completion: @escaping (MPSImage?) -> Swift.Void) {
+    func downloadImage(_ imageObj: MPSImageObj , completion: @escaping (MPSImageObj?) -> Swift.Void) {
         MPSConnectorManager.sharedInstance.downloadPic(imageObj.downloadURLStr!) { (image, error) in
             if error != nil {
                 print(error!.localizedDescription)
@@ -136,7 +135,7 @@ class MPSDataManager: NSObject {
             }
             
             let moc = self.managedObjectContext
-            let fetchRequest: NSFetchRequest<MPSImage> = MPSImage.fetchRequest()
+            let fetchRequest: NSFetchRequest<MPSImageObj> = MPSImageObj.fetchRequest()
             fetchRequest.predicate = NSPredicate(format: "imageId == %s", argumentArray: [imageObj.imageId!])
             
             print(imageObj.imageId ?? "not found")
@@ -155,15 +154,15 @@ class MPSDataManager: NSObject {
         }
     }
     
-    func saveImages(_ objects: [AnyObject]) -> [MPSImage] {
-        var imagesArray: Array<MPSImage> = Array()
+    func saveImages(_ objects: [AnyObject]) -> [MPSImageObj] {
+        var imagesArray: Array<MPSImageObj> = Array()
         
         for dictionary in objects {
             
             print(dictionary)
             
-            let entity: NSEntityDescription = NSEntityDescription.entity(forEntityName: "MPSImage", in: self.managedObjectContext)!
-            let imageObj: MPSImage = NSManagedObject(entity: entity, insertInto: self.managedObjectContext) as! MPSImage
+            let entity: NSEntityDescription = NSEntityDescription.entity(forEntityName: "MPSImageObj", in: self.managedObjectContext)!
+            let imageObj = NSManagedObject(entity: entity, insertInto: self.managedObjectContext) as! MPSImageObj
             
             let userObj = dictionary["user"] as? [String:AnyObject]
             imageObj.name = userObj?["name"] as? String

@@ -31,12 +31,6 @@
 		8B72D97E1EC0678800ECCD22 /* MPSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D97D1EC0678800ECCD22 /* MPSDataManager.swift */; };
 		8B72D97F1EC0678800ECCD22 /* MPSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D97D1EC0678800ECCD22 /* MPSDataManager.swift */; };
 		8B72D9801EC0678800ECCD22 /* MPSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D97D1EC0678800ECCD22 /* MPSDataManager.swift */; };
-		8B72D9831EC1827900ECCD22 /* MPSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9811EC1827900ECCD22 /* MPSImage.swift */; };
-		8B72D9841EC1827900ECCD22 /* MPSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9811EC1827900ECCD22 /* MPSImage.swift */; };
-		8B72D9851EC1827900ECCD22 /* MPSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9811EC1827900ECCD22 /* MPSImage.swift */; };
-		8B72D9861EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9821EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift */; };
-		8B72D9871EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9821EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift */; };
-		8B72D9881EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D9821EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift */; };
 		8B8C3E791EBDA75100A12518 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3E781EBDA75100A12518 /* AppDelegate.swift */; };
 		8B8C3E7E1EBDA75100A12518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B8C3E7C1EBDA75100A12518 /* Main.storyboard */; };
 		8B8C3E811EBDA75100A12518 /* MyPhotoStream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3E7F1EBDA75100A12518 /* MyPhotoStream.xcdatamodeld */; };
@@ -78,8 +72,6 @@
 		8B72D9671EBEFF2B00ECCD22 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B72D9791EC02D4600ECCD22 /* MPSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSConstants.swift; sourceTree = "<group>"; };
 		8B72D97D1EC0678800ECCD22 /* MPSDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSDataManager.swift; sourceTree = "<group>"; };
-		8B72D9811EC1827900ECCD22 /* MPSImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPSImage.swift; sourceTree = "<group>"; };
-		8B72D9821EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MPSImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8B8C3E751EBDA75100A12518 /* MyPhotoStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPhotoStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B8C3E781EBDA75100A12518 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B8C3E7D1EBDA75100A12518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,8 +127,6 @@
 		8B72D9571EBEFEBF00ECCD22 /* ModalLayer */ = {
 			isa = PBXGroup;
 			children = (
-				8B72D9811EC1827900ECCD22 /* MPSImage.swift */,
-				8B72D9821EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift */,
 				8B8C3E7F1EBDA75100A12518 /* MyPhotoStream.xcdatamodeld */,
 				8B72D97D1EC0678800ECCD22 /* MPSDataManager.swift */,
 			);
@@ -414,10 +404,8 @@
 				8B8C3EAB1EBDAAE600A12518 /* MPSConnectorManager.swift in Sources */,
 				8B72D95D1EBEFF0500ECCD22 /* MPSTableViewCell.swift in Sources */,
 				8B72D96E1EBEFF2B00ECCD22 /* MPSRandomPicVC.swift in Sources */,
-				8B72D9861EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift in Sources */,
 				8B8C3EAF1EBDAAF400A12518 /* MPSConnector.swift in Sources */,
 				8B72D9711EBEFF2B00ECCD22 /* ViewController.swift in Sources */,
-				8B72D9831EC1827900ECCD22 /* MPSImage.swift in Sources */,
 				8B72D97A1EC02D4600ECCD22 /* MPSConstants.swift in Sources */,
 				8B8C3E811EBDA75100A12518 /* MyPhotoStream.xcdatamodeld in Sources */,
 			);
@@ -427,8 +415,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B72D9871EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift in Sources */,
-				8B72D9841EC1827900ECCD22 /* MPSImage.swift in Sources */,
 				8B72D95E1EBEFF0500ECCD22 /* MPSTableViewCell.swift in Sources */,
 				8B72D97F1EC0678800ECCD22 /* MPSDataManager.swift in Sources */,
 				8B72D96F1EBEFF2B00ECCD22 /* MPSRandomPicVC.swift in Sources */,
@@ -445,8 +431,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B72D9881EC1827900ECCD22 /* MPSImage+CoreDataProperties.swift in Sources */,
-				8B72D9851EC1827900ECCD22 /* MPSImage.swift in Sources */,
 				8B72D95F1EBEFF0500ECCD22 /* MPSTableViewCell.swift in Sources */,
 				8B72D9801EC0678800ECCD22 /* MPSDataManager.swift in Sources */,
 				8B72D9701EBEFF2B00ECCD22 /* MPSRandomPicVC.swift in Sources */,

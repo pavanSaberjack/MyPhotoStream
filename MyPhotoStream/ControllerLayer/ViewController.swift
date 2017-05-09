@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var imagesTableView: UITableView!
     
-    var imagesArray : [MPSImage] = []
+    var imagesArray : [MPSImageObj] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
                 }
                 
                 DispatchQueue.main.async {
-                    let arr : [MPSImage] = images!
+                    let arr : [MPSImageObj] = images!
                     self.imagesArray.append(contentsOf: arr)
                     self.imagesTableView.reloadData()
                 }
@@ -78,7 +78,7 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
         let cell: MPSTableViewCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! MPSTableViewCell
         cell.contentView.bringSubview(toFront: cell.nameLabel)
         
-        let imageObj: MPSImage = self.imagesArray[indexPath.row]
+        let imageObj: MPSImageObj = self.imagesArray[indexPath.row]
         
         cell.nameLabel?.text = imageObj.name
         cell.smallDescriptionLabel.text = imageObj.smallDescription
@@ -86,7 +86,7 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
         
         if imageObj.image == nil {            
             // download Image
-            downloadImage(imageObj.downloadURLStr!, imageObj)
+//            downloadImage(imageObj.downloadURLStr!, imageObj)
         } else {
             let image: UIImage = imageObj.image as! UIImage
             cell.imgView?.image = image
@@ -94,7 +94,7 @@ class ViewController: UIViewController, MPSAuthenticationVCDelegate, UITableView
         return cell
     }
     
-    func downloadImage(_ url: String, _ imageObject: MPSImage) {
+    func downloadImage(_ url: String, _ imageObject: MPSImageObj) {
         MPSDataManager.sharedInstance.downloadImage(imageObject) { (updatedObj) in
             if updatedObj == nil || updatedObj?.image == nil {
                 print()
