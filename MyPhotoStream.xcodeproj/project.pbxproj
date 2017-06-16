@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		8B561EF31EF27A2300B5152E /* MyPhotoStream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3E7F1EBDA75100A12518 /* MyPhotoStream.xcdatamodeld */; };
 		8B561EF41EF27A2400B5152E /* MyPhotoStream.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B8C3E7F1EBDA75100A12518 /* MyPhotoStream.xcdatamodeld */; };
-=======
 		6EE790E666385C629633FFFC /* Pods_MyPhotoStreamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215370DCBB66740B546F2920 /* Pods_MyPhotoStreamUITests.framework */; };
 		70B96ABFB1F4F0B642D641C8 /* Pods_MyPhotoStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD304BEE329CB5456BE49BC9 /* Pods_MyPhotoStream.framework */; };
->>>>>>> 516e912343e30d5466e908c2228c16daa1b8ed2f
 		8B72D95D1EBEFF0500ECCD22 /* MPSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D95B1EBEFF0500ECCD22 /* MPSTableViewCell.swift */; };
 		8B72D95E1EBEFF0500ECCD22 /* MPSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D95B1EBEFF0500ECCD22 /* MPSTableViewCell.swift */; };
 		8B72D95F1EBEFF0500ECCD22 /* MPSTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B72D95B1EBEFF0500ECCD22 /* MPSTableViewCell.swift */; };
