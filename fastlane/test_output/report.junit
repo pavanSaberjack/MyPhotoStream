@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name='MyPhotoStreamUITests.xctest' tests='3' failures='0'>
   <testsuite name='MyPhotoStreamTests.MyPhotoStreamTests' tests='2' failures='0'>
-    <testcase classname='MyPhotoStreamTests.MyPhotoStreamTests' name='testExample' time='0.005'/>
-    <testcase classname='MyPhotoStreamTests.MyPhotoStreamTests' name='testPerformanceExample' time='0.327'/>
+    <testcase classname='MyPhotoStreamTests.MyPhotoStreamTests' name='testExample' time='0.002'/>
+    <testcase classname='MyPhotoStreamTests.MyPhotoStreamTests' name='testPerformanceExample' time='0.326'/>
   </testsuite>
   <testsuite name='MyPhotoStreamUITests.MyPhotoStreamUITests' tests='1' failures='0'>
-    <testcase classname='MyPhotoStreamUITests.MyPhotoStreamUITests' name='testExample' time='7.064'/>
+    <testcase classname='MyPhotoStreamUITests.MyPhotoStreamUITests' name='testExample' time='6.870'/>
   </testsuite>
 </testsuites>
